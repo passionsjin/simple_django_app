@@ -6,3 +6,5 @@ WORKDIR /simple_django_app/simpleapp
 
 RUN pip install -r requirements.txt
 
+RUN python manage.py migrate
+
