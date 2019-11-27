@@ -1,6 +1,22 @@
 ```
 https://github.com/passionsjin/simple_django_app.git
 ```
+# django setting
+django-admin startproject mysite
+python manage.py startapp myapp
+
+## database migrate
+python manage.py makemigrations {migrate_name}
+python manage.py migrate {migrate_name}
+
+## create super user
+python manage.py createsuperuser
+
+## start server
+python manage.py runserver 0.0.0.0:8000
+# docker
+
+# Kube
 #### docker build -t django-simple-app .
 #### kubectl apply -f deployment.yml
 #### kubectl expose deploy django-simple-app-deployment --type=NodePort
@@ -24,9 +40,10 @@ spec:
       containers:
       - name: django-simple-app
         image: django-simple-app
-        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
+      nodeSelector:
+        node: "worker"
 ```
 
 ## Deployment of new versions of the application
