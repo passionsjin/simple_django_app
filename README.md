@@ -1,6 +1,11 @@
 ```
 https://github.com/passionsjin/simple_django_app.git
 ```
+
+# JWT 인증
+https://dev-yakuza.github.io/ko/django/jwt/
+https://medium.com/wasd/restful-api-in-django-16fc3fb1a238
+
 # django setting
 django-admin startproject mysite
 python manage.py startapp myapp

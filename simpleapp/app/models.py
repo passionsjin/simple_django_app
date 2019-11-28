@@ -2,6 +2,9 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+# OneToOne
+# https://cjh5414.github.io/extending-user-model-using-one-to-one-link/
+
 
 class ExampleModel(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
