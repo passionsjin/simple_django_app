@@ -5,6 +5,11 @@ https://github.com/passionsjin/simple_django_app.git
 # JWT 인증
 https://dev-yakuza.github.io/ko/django/jwt/
 https://medium.com/wasd/restful-api-in-django-16fc3fb1a238
+## without browser
+https://stackoverflow.com/questions/11898065/how-to-disable-admin-style-browsable-interface-of-django-rest-framework
+
+# django html to pdf
+https://codeburst.io/django-render-html-to-pdf-41a2b9c41d16
 
 # django setting
 django-admin startproject mysite
