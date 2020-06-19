@@ -5,13 +5,20 @@ https://github.com/passionsjin/simple_django_app.git
 # JWT 인증
 https://dev-yakuza.github.io/ko/django/jwt/
 https://medium.com/wasd/restful-api-in-django-16fc3fb1a238
-## without browser
+## without browser (rest api url 제거)
 https://stackoverflow.com/questions/11898065/how-to-disable-admin-style-browsable-interface-of-django-rest-framework
 
 # django html to pdf
 https://codeburst.io/django-render-html-to-pdf-41a2b9c41d16
 
+# django dataclass
+https://www.revsys.com/tidbits/dataclasses-and-attrs-when-and-why/
+
+# setting.py 
+https://mingrammer.com/ways-to-manage-the-configuration-in-python/
+
 # django setting
+
 django-admin startproject mysite
 python manage.py startapp myapp
 
