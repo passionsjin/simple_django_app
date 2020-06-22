@@ -3,6 +3,8 @@
 import os
 import sys
 
+from django.contrib.auth import get_user_model
+
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'simpleapp.settings.local')
@@ -18,4 +20,6 @@ def main():
 
 
 if __name__ == '__main__':
+    User = get_user_model()
+    User.objects.create_superuser('admin', 'admin@admin.com', 'admin')
     main()
