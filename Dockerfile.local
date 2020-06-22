@@ -4,9 +4,7 @@ RUN git clone https://github.com/passionsjin/simple_django_app.git
 
 WORKDIR /simple_django_app/simpleapp
 
-RUN pip install -r ./requirements/production.txt
+RUN pip install -r ./requirements/local.txt
 
-RUN ["chmod", "+x", "start.sh"]
-
-ENTRYPOINT ["sh","./start.sh"]
+RUN python manage.py migrate
 

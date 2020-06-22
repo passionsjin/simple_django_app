@@ -23,4 +23,5 @@ class ExampleModel(models.Model):
         return self.title
 
 
+# class
 

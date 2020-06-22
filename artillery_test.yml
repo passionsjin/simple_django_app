@@ -1,0 +1,12 @@
+config:
+  target: 'http://104.43.228.235:8080'
+  phases:
+    - duration: 5
+      arrivalRate: 1000
+scenarios:
+  - flow:
+    - post:
+        url: "/api/token/"
+        json:
+          username: "admin"
+          password: "admin"
