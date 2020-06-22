@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - .:/simple_django_web/simpleapp/
+      - .:/simple_django_web
       - ./nginx:/etc/nginx/conf.d
     depends_on:
       - web
@@ -14,7 +14,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/simple_django_web/simpleapp/
+      - .:/simple_django_web
     ports:
       - "8000:8000"
     env_file:
