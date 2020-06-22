@@ -20,6 +20,4 @@ def main():
 
 
 if __name__ == '__main__':
-    User = get_user_model()
-    User.objects.create_superuser('admin', 'admin@admin.com', 'admin')
     main()
