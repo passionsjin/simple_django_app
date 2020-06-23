@@ -68,7 +68,7 @@ def redis_get(request):
 
 def sleep_func(request):
     if request.GET['second']:
-        sec = request.GET['second']
+        sec = int(request.GET['second'])
     else:
         sec = 1
     count = 0
