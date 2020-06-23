@@ -1,4 +1,5 @@
 import socket
+from time import sleep
 
 from django.contrib import auth
 from django.contrib.auth.models import User
@@ -54,7 +55,8 @@ def logout(request):
 def redis_increase(request):
     if cache.get('con_count') is None:
         cache.set('con_count', 1, 3600)
-    cache.incr('con_count')
+    else:
+        cache.incr('con_count')
     count = cache.get('con_count')
     return HttpResponse(f'count : {count}')
 
@@ -62,3 +64,12 @@ def redis_increase(request):
 def redis_get(request):
     count = cache.get('con_count')
     return HttpResponse(f'count : {count}')
+
+
+def sleep_func(request):
+    if request.GET['second']:
+        sec = request.GET['second']
+    else:
+        sec = 1
+    sleep(sec)
+    return HttpResponse('wake')
