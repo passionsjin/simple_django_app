@@ -71,5 +71,7 @@ def sleep_func(request):
         sec = request.GET['second']
     else:
         sec = 1
-    sleep(int(sec))
-    return HttpResponse('wake')
+    count = 0
+    for i in range(10000000 * sec):
+        count += 1
+    return HttpResponse(f'wake {count}')
