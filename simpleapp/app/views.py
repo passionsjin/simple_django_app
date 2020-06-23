@@ -53,7 +53,7 @@ def logout(request):
 
 def redis_increase(request):
     if cache.get('con_count') is None:
-        cache.set('con_count', 1)
+        cache.set('con_count', 1, 3600)
     cache.incr('con_count')
     count = cache.get('con_count')
     return HttpResponse(f'count : {count}')
