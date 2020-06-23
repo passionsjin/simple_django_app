@@ -2,6 +2,8 @@ import socket
 
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.core.cache import cache
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 
@@ -47,3 +49,16 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
+
+
+def redis_increase(request):
+    if cache.get('con_count') is None:
+        cache.set('con_count', 1)
+    cache.incr('con_count')
+    count = cache.get('con_count')
+    return HttpResponse(f'count : {count}')
+
+
+def redis_get(request):
+    count = cache.get('con_count')
+    return HttpResponse(f'count : {count}')
