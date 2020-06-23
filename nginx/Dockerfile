@@ -7,4 +7,4 @@ EXPOSE 80 443
 
 # Is this even the right command I have no idea
 
-CMD service nginx start
+CMD ["nginx", "-g", "daemon off;"]
