@@ -71,5 +71,5 @@ def sleep_func(request):
         sec = request.GET['second']
     else:
         sec = 1
-    sleep(sec)
+    sleep(int(sec))
     return HttpResponse('wake')
