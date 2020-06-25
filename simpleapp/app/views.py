@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
+from simpleapp.app.task import asyn_sleep
 
 
 def hello(request):
@@ -71,7 +72,5 @@ def sleep_func(request):
         sec = int(request.GET['second'])
     else:
         sec = 1
-    count = 0
-    for i in range(10000000 * sec):
-        count += 1
-    return HttpResponse(f'wake {count}')
+    asyn_sleep.delay(sec)
+    return HttpResponse(f'wake {sec}')
