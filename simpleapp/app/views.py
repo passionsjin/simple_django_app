@@ -9,7 +9,7 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
-from simpleapp.app.task import asyn_sleep
+from .task import asyn_sleep
 
 
 def hello(request):
